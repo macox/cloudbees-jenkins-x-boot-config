@@ -159,3 +159,9 @@ certmanager:
   enabled: false
 {{- end }}
 {{- end }}
+
+{{- if .Requirements.autoUpdate }}
+autoUpdate:
+  schedule: {{ .Requirements.autoUpdate.schedule | quote }}
+  enabled: {{ .Requirements.autoUpdate.enabled }}
+{{- end }}
