@@ -19,9 +19,10 @@ spec:
         spec:
           containers:
           - args:
-            - bu       
+            - boot
+            - upgrade
             command:
-            - jx            
+            - jx
             image: docker.io/macox/jx:1.0.0
             imagePullPolicy: Always
             name: boot-upgrade
@@ -34,7 +35,7 @@ spec:
           securityContext: {}
           terminationGracePeriodSeconds: 30
           serviceAccountName: tekton-bot
-  successfulJobsHistoryLimit: 3
+  successfulJobsHistoryLimit: 2
   schedule: {{ .Values.autoUpdate.schedule | default "0 12 */5 * *" | quote }}
   suspend: false
 {{- end }}
