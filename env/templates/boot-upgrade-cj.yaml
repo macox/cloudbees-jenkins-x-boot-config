@@ -19,10 +19,11 @@ spec:
         spec:
           containers:
           - args:
-            - up            
+            - upgrade
+            - boot
             command:
             - jx
-            image: docker.io/macox/jx:1.0.0
+            image: docker.io/macox/jx:1.0.1
             imagePullPolicy: Always
             name: boot-upgrade
             resources: {}
