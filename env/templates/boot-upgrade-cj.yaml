@@ -23,7 +23,7 @@ spec:
             - boot
             command:
             - jx
-            image: docker.io/macox/jx:1.0.1
+            image: docker.io/macox/jx:1.0.2
             imagePullPolicy: Always
             name: boot-upgrade
             resources: {}
