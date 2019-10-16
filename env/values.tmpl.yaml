@@ -165,3 +165,5 @@ autoUpdate:
   schedule: {{ .Requirements.autoUpdate.schedule | quote }}
   enabled: {{ .Requirements.autoUpdate.enabled }}
 {{- end }}
+
+agent-image: gcr.io/jenkinsxio/builder-go:0.1.791
